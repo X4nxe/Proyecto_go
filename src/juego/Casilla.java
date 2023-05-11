@@ -33,7 +33,7 @@ public class Casilla {
 		lleno = false;
 	}
 
-	String pintarCasilla() {
+	public String pintarCasilla() {
 		if(lleno) {
 			return ficha.getFicha();
 		}else {

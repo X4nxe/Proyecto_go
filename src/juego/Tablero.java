@@ -34,7 +34,7 @@ public class Tablero {
 			}
 			System.out.println();
 		}
-		System.out.println("");
+		System.out.println();
 	}
 	
 	public Casilla devolverCasilla(Coordenada coordenada) {
@@ -188,7 +188,6 @@ public class Tablero {
 			if(tablero[count][casilla.getCoordenada().getX()].getFicha() == fichaContraria) {
 				do {
 					if(count < 0) {
-						validar = false;
 						exit = true;
 					}else if(tablero[count][casilla.getCoordenada().getX()].getFicha() == ficha) {
 						validar = true;
@@ -266,7 +265,6 @@ public class Tablero {
 			if(tablero[countY][countX].getFicha() == fichaContraria) {
 				do {
 					if(countX >= 8 || countY < 0) {
-						validar = false;
 						exit = true;
 					}else if(tablero[countY][countX].getFicha() == ficha) {
 						validar = true;
@@ -292,8 +290,7 @@ public class Tablero {
 		if(countX >= 0 && countY <= 7) {
 			if(tablero[countY][countX].getFicha() == fichaContraria) {
 				do {
-					if(countX < 0 || countY >= 8) {					
-						validar = false;
+					if(countX < 0 || countY >= 8) {
 						exit = true;
 					}else if(tablero[countY][countX].getFicha() == ficha) {
 							validar = true;

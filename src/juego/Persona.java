@@ -11,7 +11,7 @@ public class Persona extends Jugador {
 	}
 	
 	public boolean devolverJugada(Tablero tablero) {
-		boolean turno=true;
+		boolean turno = true;
 		do {
 			Coordenada coordenada = pedirCoordenada();
 			if (!tablero.comprobarCoordenada(coordenada)) {

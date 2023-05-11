@@ -1,7 +1,7 @@
 package juego;
 
 public enum Ficha {
-	NEGRA(" 0 "),BLANCA(" O ");
+	NEGRA("\u001B[30m 0 \u001B[0m"),BLANCA(" O ");
 
 	private String ficha;
 	
