@@ -501,6 +501,7 @@ public class Tablero {
 	private int fichasVolteadasArriba(Casilla casilla,Ficha ficha) {		
 		boolean exit = false;
 		int countY = casilla.getCoordenada().getY() - 1;
+		
 		int contarFichas = 0;
 		if(comprobarArriba(casilla,ficha)) {
 			do {
