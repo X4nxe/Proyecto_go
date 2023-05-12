@@ -1,6 +1,7 @@
 package juego;
 
 public abstract class Jugador {
+	
 	protected Ficha ficha;
 	
 	Jugador(Ficha ficha) {
