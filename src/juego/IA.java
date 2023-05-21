@@ -6,13 +6,26 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Clase hija de la clase Jugador, que representa la inteligencia artificial del juego.
+ * @author Alex
+ * @version 1.0
+ * @since 1.0
+ */
 public class IA extends Jugador{
 	
+	/**
+	 * Constructor de la clase IA.
+	 * @param ficha Tipo de ficha de la IA.
+	 */
 	IA(Ficha ficha) {
 		super(ficha);
 	}
 	
-	public boolean devolverJugada(Tablero tablero) {
+	/**
+	 * Metodo heredado de la clase abstracta Jugador que devuelve una jugada.
+	 */
+	public void devolverJugada(Tablero tablero) {
 		List<MovimientoIA> coordenadas = new ArrayList<MovimientoIA>();
 		int a;
 		int b;
@@ -35,6 +48,5 @@ public class IA extends Jugador{
 		} catch (InterruptedException e) {
 
 		}
-		return true;
 	}	
 }

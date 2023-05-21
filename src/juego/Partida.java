@@ -3,14 +3,32 @@ package juego;
 import java.util.Scanner;
 
 import consoleInput.ConsoleInput;
-
+/**
+ * Clase que define la partida.
+ * @author Alejandro Sanchez Serrano
+ * @version 1.0
+ * @since 1.0
+ */
 public class Partida {
+	/**
+	 * Almacena el primer jugador.
+	 */
 	private Jugador jugador1;
+	/**
+	 * Almacena el segundo jugador.
+	 */
 	private Jugador jugador2;
-	private boolean ganar;
-	@SuppressWarnings("unused")
-	private boolean turno;
 	
+	/**
+	 * Amacena un booleano: true: fin de la partida, false: continua la partida.
+	 */
+	private boolean ganar;
+	
+	/**
+	 * Metodo que recoge los metodos principales de la partida.
+	 * @see #pedirJuego()
+	 * @see #partidaJugadores()
+	 */
 	public void partida() {
 		int tipo;
 		tipo = pedirJuego();
@@ -20,6 +38,10 @@ public class Partida {
 		}		
 	}
 	
+	/**
+	 * Metodo que define el tipo de partida segun quiera el usuario
+	 * @return Devuelve la eleccion del usuario.
+	 */
 	private int pedirJuego() {
 		ConsoleInput console = new ConsoleInput(new Scanner(System.in));
 		int lector;
@@ -48,6 +70,9 @@ public class Partida {
 		return lector;
 	}
 	
+	/**
+	 * Metodo que se encarga de las comprobaciones relacionadas con los turnos y el fin de la partida.
+	 */
 	private void partidaJugadores() {
 		Tablero tablero = new Tablero();
 		do {
